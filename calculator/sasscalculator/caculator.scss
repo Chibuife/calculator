@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+}
+:root{
+//  Theme 1
+//  Backgrounds
+
+--mainbackground: hsl(222, 26%, 31%);
+--togglebackground-keypadbackground: hsl(223, 31%, 20%);
+--screenbackground: hsl(224, 36%, 15%);
+
+// Keys
+
+--keybackground-del: hsl(225, 21%, 49%);
+--keyshadow-del: hsl(224, 28%, 35%);
+
+--keybackground-toggle-eql: hsl(6, 63%, 50%);
+--keyshadow-eql: hsl(6, 70%, 34%);
+
+--keybackground: hsl(30, 25%, 89%);
+--keyshadow: hsl(28, 16%, 65%);
+
+// Text
+--key-color: hsl(221, 14%, 31%);
+--White-text: white;
+
+
+// Typography
+
+// Body Copy
+
+--Font-size-numbers: 32px;
+
+// Font
+--Family: 'League Spartan', sans-serif;
+--Weights: 700;
+}
+
+.two{
+    // Theme 2
+
+// Backgrounds
+
+--mainbackground: hsl(0, 0%, 90%);
+--togglebackground-keypadbackground: hsl(0, 5%, 81%);
+--screenbackground: hsl(0, 0%, 93%);
+
+// Keys
+
+--keybackground-del: hsl(185, 42%, 37%);
+--keyshadow-del: hsl(185, 58%, 25%);
+
+--keybackground-toggle: hsl(25, 98%, 40%);
+--keyshadow: hsl(25, 99%, 27%);
+
+--keybackground-eql: hsl(45, 7%, 89%);
+--keyshadow-eql: hsl(35, 11%, 61%);
+
+// Text
+
+--key-color: hsl(60, 10%, 19%);
+--White-text: white;
+}
+
+.three{
+    // Theme 3
+
+//  Backgrounds
+
+--mainbackground: hsl(268, 75%, 9%);
+--togglebackground-keypadbackground-screenbackground: hsl(268, 71%, 12%);
+
+// Keys
+
+--keybackground-del: hsl(281, 89%, 26%);
+--keyshadow-del: hsl(285, 91%, 52%);
+
+--keybackground-toggle: hsl(176, 100%, 44%);
+--keyshadow: hsl(177, 92%, 70%);
+
+--keybackground-eql: hsl(268, 47%, 21%);
+--keyshadow-eql: hsl(290, 70%, 36%);
+
+// Text
+
+--key-color: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+--White-text: white;
+}
+body{
+    background-color: var(--mainbackground);
+    max-width: 1440px;
+    height: 100vh;
+    margin: auto;
+
+}
+.body{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    margin-top: 50px;
+    font-weight: var(--Weights);
+    user-select: none;
+    font-family: var(--Family);
+}
+
+.topmenu{
+    display: flex;
+    justify-content: space-between;
+    color: var(--White-text);
+    h4{
+        margin-top: 15px;
+        margin-left: 350px;
+    }
+    .themes{
+        display: flex;
+        flex-direction: column;
+    }
+    .themebtn{
+        background-color: var(--screenbackground);
+        height: 15px;
+        width: 50px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .themenumbers{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .themeselector{
+        height: 12px;
+        width: 12px;
+        background-color: var(--keybackground-toggle-eql);
+        border-radius: 50px;
+        margin-top: 1.3px;
+        margin-left: 3px;
+        
+    }
+    .newthemetwo{
+        margin-left: 19px;
+        background-color: var(--keybackground-toggle);
+    }
+    .newthemethree{
+        background-color: var(--keybackground-toggle);
+         margin-left: 35px;
+    }
+}
+
+.input{
+    height: 100px;
+    background-color: var(--screenbackground);
+    border-radius: 7px;
+    margin-top: 20px;
+    color: var(--White-text);
+    font-size: 50px;
+    .previousOperand{
+        position: absolute;
+        right: 0;
+        margin-top: 50px;
+        display: none;
+    }
+    .currentOperand{
+        position: absolute;
+        right: 0;
+        margin-top: 50px
+    }
+}
+
+.keys{
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: var(--togglebackground-keypadbackground);
+    border-radius: 5px;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+    .keyscontainer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .number{
+        background-color: var(--keybackground);
+        box-shadow: 0px 2px 0px var(--keyshadow);
+        color: var(--key-color);
+        width: 80px;
+        height: 50px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+    }
+    .del{
+        background-color: var(--keybackground-del);
+        box-shadow: 0px 4px 0px var(--keyshadow-del);
+        color: var(--White-text);
+    }
+    .reset{
+        width: 200px;
+        color: var(--White-text);
+        background-color: var(--keybackground-del);
+        box-shadow: 0px 4px 0px var(--keyshadow-del);
+    }
+    .equalto{
+        width: 200px;
+        color: var(--White-text);
+        background-color: var(--keybackground-toggle-eql);
+        box-shadow: 0px 4px 0px var(--keyshadow-eql);
+    }
+}
