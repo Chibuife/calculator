@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sasscalculator/caculator.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <nav class="topmenu">
+            <h2>calc</h2>
+            <h4>theme</h4>
+            <div class="themes"> <div class="themenumbers"><span>1</span><span>2</span><span>3</span></div> <div class="themebtn"><div class="themeselector"></div></div></div>
+        </nav>
+        <div class="input">
+           <div data-previousOperand class="previousOperand"></div>
+           <div data-currentOperand class="currentOperand"></div>
+        </div>
+        <div class="keys">
+            <div class="keyscontainer">
+                <div class="number" data-number>7</div>
+                <div class="number" data-number>8</div>
+                <div class="number" data-number>9</div>
+                <div class="number del"  data-delete>DEL</div>
+            </div>
+            <div class="keyscontainer">
+                <div class="number" data-number>4</div>
+                <div class="number" data-number>5</div>
+                <div class="number" data-number>6</div>
+                <div class="number" data-operation>+</div>
+            </div>
+            <div class="keyscontainer">
+                <div class="number" data-number>1</div>
+                <div class="number" data-number>2</div>
+                <div class="number" data-number>3</div>
+                <div class="number" data-operation>-</div>
+            </div>
+            <div class="keyscontainer">
+                <div class="number" data-number>.</div>
+                <div class="number" data-number>0</div>
+                <div class="number" data-operation>/</div>
+                <div class="number" data-operation>x</div>
+            </div>
+            <div class="keyscontainer">
+                <div class="number reset"data-clear>RESET</div>
+                <div class="number equalto" data-equals>=</div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
